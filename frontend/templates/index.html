@@ -1,0 +1,103 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    
+
+    <title>Tabs </title>
+</head>
+
+<body >
+
+    <div class="container mt-4" style="margin-left: 20px;" >
+        <ul class="nav nav-tabs" id="myTabs">
+            <li class="nav-item">
+                <a class="nav-link active" id="tab1" data-toggle="tab" href="#content1">Form Creation</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tab2" data-toggle="tab" href="#content2">Alignment</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="tab3" data-toggle="tab" href="#content3">Empty</a>
+            </li>
+        </ul>
+
+        <div class="tab-content mt-2">
+            <div class="tab-pane fade show active" id="content1">
+                <form>
+                    <div class="form-group row">
+                        <div class="col-md-4">
+                            <label class="font-weight-bold"style="color:blue;">Forms *</label>
+                            <input type="text"  placeholder="Forms" style="width: 70%;  border: 1px solid #28a745;"class="form-control ">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="font-weight-bold" style="color:blue;" >Redirect path</label>
+                            
+                                <input type="text"  placeholder="Redirect path" style="width: 70%;  border: 1px solid #28a745;" class="form-control ">
+                      </div>  
+                          <div class="col-md-4">
+                                    <button class="btn btn-warning float mt-4 ml-10 " style="padding: 10px 20px; font-size: 18px;background-color:gray">+</button>
+                                </div>
+                            </div>
+                        
+
+
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <label class="font-weight-bold" style="color:blue;" >Field name 1</label>
+                            <input type="text"  placeholder="Field name 1" style="width: 70%;  border: 1px solid #28a745;" class="form-control ">
+                        </div>
+                        <div class="col-md-8">
+                            <button class="btn btn-warning float-right mt-4" style="padding: 10px 20px; font-size: 18px;background-color:gray ">+</button>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <label class="font-weight-bold" style="color:blue;"  >Field name 2</label>
+                            <input type="text"  placeholder="Field name 2" style="width: 70%;  border: 1px solid #28a745;" class="form-control ">
+                        </div>
+                        <div class="col-md-8">
+                            <button class="btn btn-warning float-right mt-4" style="padding: 10px 20px; font-size: 18px; background-color:gray">+</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="tab-pane fade" id="content2">
+                <h3>Content for Tab 2</h3>
+                <p>This is the content for Tab 2.</p>
+                
+                
+                
+            </div>
+
+            <div class="tab-pane fade" id="content3">
+                <!-- Content for Tab 3 (Empty) -->
+                <h3>Content for Tab 3</h3>
+                <p>This is the content for Tab 3.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myTabs a').on('click', function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+        });
+    </script>
+</body>
+</html>
+
+{% endblock%}
